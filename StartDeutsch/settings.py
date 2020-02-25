@@ -40,6 +40,10 @@ INSTALLED_APPS = [
 
     # own apps
     'exam.apps.ExamConfig',
+
+    #django rest
+    # 'talk',
+    'rest_framework'
 ]
 
 MIDDLEWARE = [
