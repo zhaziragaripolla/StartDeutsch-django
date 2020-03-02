@@ -41,11 +41,17 @@ INSTALLED_APPS = [
 
     # own apps
     'exam.apps.ExamConfig',
+    'users',
+    'api',
 
     #django rest
     # 'talk',
-    'rest_framework'
+    'rest_framework',
+    'rest_framework.authtoken',
+    'rest_auth',
 ]
+
+AUTH_USER_MODEL = 'users.CustomUser'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -89,21 +95,21 @@ DATABASES = {
 }
 """
 # LOCAL DB
-"""
 
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql_psycopg2",
         "NAME": "database",
-        "USER": "zhazira",
-        "PASSWORD": "nescafe",
+        "USER": "postgres",
+        "PASSWORD": "hello123",
         "HOST": "127.0.0.1",
         "PORT": "5432",
-    }
-}
-"""
-# RDS
+    },
 
+}
+
+# RDS
+"""
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
@@ -114,7 +120,7 @@ DATABASES = {
         'PORT': '5432',
     }
 }
-
+"""
 # Password validation
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators
 
