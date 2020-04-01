@@ -2,7 +2,6 @@
   "environments": {
     "test": {
       "scripts": {
-        "addons": ["heroku-postgresql:in-dyno"],
         "test-setup": "python manage.py collectstatic --noinput",
         "test": "python manage.py test"
       }
