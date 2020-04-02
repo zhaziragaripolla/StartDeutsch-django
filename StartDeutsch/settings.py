@@ -143,8 +143,8 @@ STATIC_URL = '/static/'
 
 # WhiteNoise comes with a storage backend which automatically takes care of compressing files and creating unique names
 # for each version so they can safely be cached forever.
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
+STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.ManifestStaticFilesStorage'
 # Media
 MEDIA_ROOT = os.path.join(PROJECT_ROOT, 'media')
 MEDIA_URL = '/media/'
