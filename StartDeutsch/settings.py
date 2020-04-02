@@ -15,6 +15,7 @@ import dj_database_url
 from decouple import config
 import django_heroku
 
+# Defining Project root for Heroku configuration
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
