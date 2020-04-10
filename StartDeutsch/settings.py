@@ -95,16 +95,16 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
-"""
-# LOCAL DB
+
+# DB on ec2
 
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql_psycopg2",
-        "NAME": "database",
+        "NAME": "startdeutsch",
         "USER": "postgres",
-        "PASSWORD": "hello123",
-        "HOST": "127.0.0.1",
+        "PASSWORD": "NescafeGold2454",
+        "HOST": "172.31.93.124",
         "PORT": "5432",
     },
 
@@ -115,14 +115,14 @@ DATABASES = {
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'dbstartdeutsch',
+        'NAME': 'startdeutsch',
         'USER': 'postgres',
-        'PASSWORD': 'NescafeGold2454',
-        'HOST': 'dbinstance1.colaotafqlzu.us-east-2.rds-preview.amazonaws.com',
+        'PASSWORD':'TwEFSsTST6j8pGAWZJge',
+        'HOST':'database-1.clxanru3qkxs.eu-north-1.rds.amazonaws.com',
         'PORT': '5432',
     }
 }
-"""
+
 # Password validation
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators
 
@@ -160,3 +160,4 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
