@@ -1,0 +1,16 @@
+order_number,question_text,correct_choice_index,audio_path,answer_choices
+1,  Was kostet der Brief?,1,test6/listening/1.mp3,19 Cent;56 Cent;65 Cent
+2,  Wann fährt der nächste Zug?,1,test6/listening/2.mp3,8 Uhr 10 Minuten;10 Uhr 18 Minuten;18 Uhr
+3,  Wo arbeitet der Mann?,1,test6/listening/3.mp3,Im Straßendienst;Bei der Bahn;Auf dem Flughafen
+4,  Wo war Anna?,0,test6/listening/4.mp3,In der Schule;Im Restaurant;Bei Freundinnen
+5,  Was machen die Kinder?,1,test6/listening/5.mp3,Fernsehen;Lernen;Spielen
+6,  Wie kommt der Mann zur Arbeit?,2,test6/listening/6.mp3,Mit dem Auto;Mit dem Fahrrad;Mit dem Zug
+7,  Die Kunden sollen das Geschäft besuchen,0,test6/listening/7.mp3,  
+8,  Frau Riedel soll eine Information geben,0,test6/listening/8.mp3,  
+9,  Die Fahrgäste sollen sitzen bleiben,0,test6/listening/9.mp3,  
+10,  Die Fahrgäste sollen zu einem anderen Gleis gehen,1,test6/listening/10.mp3,  
+11,  Welche Handynummer kann man anrufen?,1,test6/listening/11.mp3,0117443227;0171443227;0172443227
+12,  Welche Nummer hat der Fernseh-Service?,2,test6/listening/12.mp3,Eins;Drei;Vier
+13,  Wann soll das Mädchen kommen?,0,test6/listening/13.mp3,Am Donnerstag;Am Samstag;Am Sonntag
+14,  Wie lange soll die Frau arbeiten?,1,test6/listening/14.mp3,Bis 14 Uhr;Bis 16 Uhr;Bis 15.45 Uhr
+15,  Was soll der Mann abholen?,2,test6/listening/15.mp3,Den Ausweis;Das Geld;Die Scheckkarte

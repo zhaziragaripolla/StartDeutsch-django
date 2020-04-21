@@ -1,0 +1,16 @@
+order_number,question_text,correct_choice_index,audio_path,answer_choices
+1,Was kostet der Pullover?,2,test4/listening/1.mp3,Dreißig Euro;Fünfundneunzig Euro;Neunzehn Euro fünfundneunzig Cent
+2,Wie spät ist es?,1,test4/listening/2.mp3,15 Uhr;Gleich 5 Uhr;Halb 5 Uhr
+3,Was isst die Frau im Restaurant?,0,test4/listening/3.mp3,Pommes;Fisch;Wurst
+4,In welche Klasse geht Frau Hegers Sohn?,1,test4/listening/4.mp3,In die neunte Klasse;In die dritte Klasse;In die vierte Klasse
+5,Wie kommt die Frau in den 2. Stock?,0,test4/listening/5.mp3,Mit dem Aufzug;Auf der Treppe um die Ecke;Mit der Rolltreppe
+6, Wohin fährt Herr Albers?,2,test4/listening/6.mp3,In Urlaub ans Meer;Zur Arbeit;Zur Familie
+7,Die Kunden sollen die Weihnachtsfeier besuchen,1,test4/listening/7.mp3,  
+8,Die Fahrgäste sollen sich im Restaurant treffen,1,test4/listening/8.mp3,  
+9,Die Fahrgäste sollen im Zug bleiben,0,test4/listening/9.mp3,  
+10,Der Herr soll sofort zum Schalter kommen,0,test4/listening/10.mp3,  
+11,Die Nummer ist:,0,test4/listening/11.mp3,11833;11883;12833
+12,Wo genau treffen sich die Männer?,2,test4/listening/12.mp3,Am Zug;Am Bahnhof;An der Information
+13,Wie lange will der Mann\nnoch warten?,2,test4/listening/13.mp3,20 Minuten;2 Minuten;10 Minuten
+14,An welchem Tag will die\nFrau kommen?,1,test4/listening/14.mp3,Am Montag;Am Sonntag;Am Samstag
+15,Was ist kaputt?,1,test4/listening/15.mp3,Der Fernseher;Der Computer;Das Handy

@@ -1,0 +1,13 @@
+order_number,image_path,section,question_text,question_texts,description,correct_answers,answer_image_paths,correct_choice_index
+1,test2/reading/1.png,1,  ,Hanna und Bernd Schmitz besuchen Frau Nguyen.;Hanna und Bernd Schmitz kommen zum Hauptbahnhof.,  ,0;1,  ,-1
+2,test2/reading/2.png,1,  ,Das Fest ist von 3 bis 6 Uhr nachmittags.;Die Schule braucht die Eltern am Montag.;Die Eltern sollen Kuchen mitbringen.,  ,1;0;0,  ,-1
+3,  ,2,  Sie brauchen einen Schrank für das Schlafzimmer.,  ,  ,  ,test2/reading/3.png;test2/reading/4.png,1
+4,  ,2,"  Sie (Vater, Mutter) 1 Kind) suchen eine neue Wohnung im Stadtzentrum.",,,  ,test2/reading/5.png;test2/reading/6.png,1
+5,  ,2,  Sie möchten ein Auto kaufen. Das Auto soll nicht sehr groß sein.,  ,  ,  ,test2/reading/7.png;test2/reading/8.png,0
+6,  ,2,  Sie suchen einen Esstisch mit Stühlen.,  ,  ,  ,test2/reading/9.png;test2/reading/10.png,0
+7,  ,2,Ihr Sohn (6 Jahre) möchte ein Fahrrad.,  ,  ,  ,test2/reading/11.png;test2/reading/12.png,1
+8,test2/reading/13.png,3,Schokolade ist nächste Woche um 50% billiger.,  ,  Im Fenster eines Supermarkts.,  ,  ,0
+9,test2/reading/14.png,3,  Ende August können Sie wieder hier essen gehen.,  ,  Am Eingang eines Restaurants.,  ,  ,1
+10,test2/reading/15.png,3,  Heute können Sie keinen Pass bekommen.,  ,  Am Eingang zum Einwohnermeldeamt.,  ,  ,0
+11,test2/reading/16.png,3,  Die Bäckerei ist am Mittwochnachmittag geschlossen.,  ,  Am Eingang einer Bäckerei.,  ,  ,1
+12,test2/reading/17.png,3,Vom 10. bis 20. September fahren keine Busse zum Postplatz.,  ,  An der Bushaltestelle.,  ,  ,1

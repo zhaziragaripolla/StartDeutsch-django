@@ -1,0 +1,16 @@
+order_number,question_text,correct_choice_index,audio_path,answer_choices
+1,Wie kommt Frau Aksoy nach Berlin?,1,test2/listening/1.mp3,Mit dem Flugzeug;Mit dem Zug;Mit dem Auto
+2,Welche Zimmernummer hat Herr Berg?,0,test2/listening/2.mp3,523;532;5
+3,Wie viel kosten die Passbilder in Farbe?,2,test2/listening/3.mp3,10 Euro;12 Euro;17 Euro
+4,Was kauft die Frau?,1,test2/listening/4.mp3,ein Reisebuch;ein Kochbuch;ein Schulbuch
+5,Wie viel Uhr ist es?,1,test2/listening/5.mp3,13.30 Uhr;14.30 Uhr;15.30 Uhr
+6,Wie buchstabiert man den Namen?,0,test2/listening/6.mp3,Böhme;Behme;Bohme
+7,Fisch ist heute nicht teuer,1,test2/listening/7.mp3,  
+8,Der Zug fährt nicht weiter,1,test2/listening/8.mp3,  
+9,Das Geschäft schließt heute um 19 Uhr,0,test2/listening/9.mp3,  
+10,Der Fahrer soll schnell zur Straßenbahn kommen,0,test2/listening/10.mp3,  
+11,Wohin möchte Klaus gehen?,0,test2/listening/11.mp3,Ins Restaurant;Ins Schwimmbad;Ins Kino
+12,Wann kommt Jasmin an?,1,test2/listening/12.mp3,Um halb acht;Um halb neun;Um zwanzig nach acht
+13,Wann können Sie am Mittwoch nicht mit dem Arzt sprechen?,2,test2/listening/13.mp3,Um 8 Uhr;Um 11 Uhr;Um 16 Uhr
+14,Wie ist die neue Telefonnummer?,1,test2/listening/14.mp3,580 89 42;580 98 42;580 98 24
+15,Wann hat das Restaurant wieder auf?,2,test2/listening/15.mp3,Am 4. August;Am 20. August;Am 21. August

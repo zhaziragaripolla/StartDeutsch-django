@@ -1,0 +1,16 @@
+order_number,question_text,correct_choice_index,audio_path,answer_choices
+1,  Wo wollen die Freundinnen die Party machen?,0,test5/listening/1.mp3,Im Garten;Im Haus;Am See
+2,  Wann beginnt das Konzert?,2,test5/listening/2.mp3,Um 19.30 Uhr;Um 20.30 Uhr;Um 21.00 Uhr
+3,  Wo stehen Taxis?,2,test5/listening/3.mp3,An der Ecke rechts;Die Straße geradeaus;Geradeaus und links
+4,  Wie lange dauern die Sommerkurse?,1,test5/listening/4.mp3,Eine Woche;Zwei Wochen;Vier Wochen
+5,  Wie viele neue Kolleginnen hat die Dame?,1,test5/listening/5.mp3,Drei;Zwei;Vier
+6,  Wann ist Frau Horn aus dem Urlaub zurück?,0,test5/listening/6.mp3,Am Montag;Am Mittwoch;Am Freitag
+7,  Im Zugrestaurant kann man heute frühstücken,0,test5/listening/7.mp3,  
+8,Die Fluggäste sollen in den 1. Stock kommen,0,test5/listening/8.mp3,  
+9,  Die Mitarbeiter sollen sofort zum Ausgang gehen,1,test5/listening/9.mp3,  
+10,  Bis mittags gibt es keine Anzeigen zu Ankunft und Abflug,1,test5/listening/10.mp3,  
+11,  Wann will Greta das Formular holen?,2,test5/listening/11.mp3,Heute Abend;Morgen;Montagmorgen
+12,  Wo treffen sich die Freunde?,0,test5/listening/12.mp3,Am Bahnhof;Im italienischen Restaurant;Im Restaurant „Zwiebel“
+13,  Wann kann Eva Schmitz zum Gesprächstermin gehen?,1,test5/listening/13.mp3,"Morgen, um 8.00 Uhr;Mittwoch, um 10.00 Uhr;Mittwoch, um 12 Uhr"
+14,  Welches Wörterbuch ist heute nicht wichtig?,1,test5/listening/14.mp3,Das spanische;Das polnische;Das französische
+15,  Wie kommt der Herr ins Büro?,0,test5/listening/15.mp3,Mit dem Fahrrad;Mit der Straßenbahn;Mit dem Auto

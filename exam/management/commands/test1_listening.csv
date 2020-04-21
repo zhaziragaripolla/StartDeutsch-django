@@ -1,0 +1,16 @@
+order_number,question_text,correct_choice_index,audio_path,answer_choices
+1,  Wo gibt es Kleidung für Kinder?,1,test1/1.mp3,Im 4. Stock;Im 2.Stock;Im 1.Stock
+2,  Was bestellt die Dame?,1,test1/2.mp3,Fisch;Salat;Hänchen
+3,  Wie lange hat das Museum mittwochs geöffnet?,0,test1/3.mp3,Bis 15 Uhr;Bis 22 Uhr;Bis 18 Uhr
+4,  Welchen Sport empfiehlt der Arzt?,2,test1/4.mp3,Fußball;Laufen;Schwimmen
+5,  Wo macht Familie Bauer Urlaub?,2,test1/5.mp3,Am Meer;Zu Hause;Bei Verwandten
+6,  Wie lange dauert der Flug nach München?,0,test1/6.mp3,50 Minuten;45 Minuten;30 Minuten
+7,  Im Restaurant gibt es eine Geburtstagsfeier.,0,test1/7.mp3,  
+8,  Die Leute sollen zu Hause bleiben.,1,test1/8.mp3,  
+9,Die Urlauber sollen um 14 Uhr am Bus sein.,1,test1/9.mp3,  
+10,  Der Vater von Mario wartet am Informationsschalter.,0,test1/10.mp3,  
+11,  Wann kann Frau Krause ihren Wagen abholen?,1,test1/11.mp3,Am Samstagnachmittag;Am Vormittag;Zwischen 12 und 13 Uhr
+12,  Was mochte Nina heute Abend machen?,0,test1/12.mp3,Einen Film sehen;Lernen;Zu Hause bleiben
+13,  Was soll Sarah mitbringen?,1,test1/13.mp3,Blumen;Ein Wörterbuch;CDs
+14,  Wo treffen sich die drei Frauen?,2,test1/14.mp3,Bei Julia;Im Konzert;In der Disco
+15,  Wann will Herr Heinze Frau Solms treffen?,1,test1/15.mp3,Um 12 Uhr;Um 13 Uhr;Um 18 Uhr

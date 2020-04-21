@@ -1,0 +1,13 @@
+order_number,image_path,section,question_text,question_texts,description,correct_answers,answer_image_paths,correct_choice_index
+1,test3/reading/1.png,1,  ,Die Firma kontrolliert alle Wasseruhren.;Die Mieter können um 15 Uhr nicht badenoder duschen.,  ,0;1,  ,-1
+2,test3/reading/2.png,1,  ,Das Einwohnermeldeamt ist am 19. Juli denganzen Tag geschlossen.;Die Mitarbeiter arbeiten an diesem Mittwoch nur vormittags.;Am Donnerstag ist das Einwohnermeldeamtgeöffnet.,  ,0;1;1,  ,-1
+3,  ,2,  Sie fahren mit dem Auto nach Stuttgart zur Arbeit und suchen Mitfahrer.,  ,  ,  ,test3/reading/3.png;test3/reading/4.png,1
+4,  ,2,  Sie sind oft allein und möchten Leute zum Reden treffen.,  ,  ,  ,test3/reading/5.png;test3/reading/6.png,1
+5,  ,2,Ihre Kinder (7 und 9 Jahre) spielen gern Fußball und möchten in einen Verein.,  ,  ,  ,test3/reading/7.png;test3/reading/8.png,0
+6,  ,2,  Sie suchen eine Halbtagsstelle für den Vormittag.,  ,  ,  ,test3/reading/9.png;test3/reading/10.png,0
+7,  ,2,  Sie möchten Ihre alte Einbauküche samt Herd verkaufen.,  ,  ,  ,test3/reading/11.png;test3/reading/12.png,1
+8,test3/reading/13.png,3,  Sie können am Freitagnachmittag zum Arzt gehen.,  ,  An der Tür der Arztpraxis,  ,  ,1
+9,test3/reading/14.png,3,  Man kann sofort zu einem Angestellten im Finanzamt gehen.,  ,  Im Finanzamt,  ,  ,0
+10,test3/reading/15.png,3,  Sie dürfen Ihr Auto in der Nacht hier parken.,  ,  Bei den Parkplätzen in Ihrer Straße,  ,  ,1
+11,test3/reading/16.png,3,Das Sozialamt ist ab dem 2. Mai in einer anderen Straße.,  ,  Am Eingang des Sozialamts,  ,  ,1
+12,test3/reading/17.png,3,  Kinder dürfen hier nicht spielen.,  ,  Auf der Straße,  ,  ,1

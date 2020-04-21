@@ -1,0 +1,16 @@
+order_number,question_text,correct_choice_index,audio_path,answer_choices
+1,  Wo gibt es eine Apotheke?,2,test3/listening/1.mp3,In der Goethestraße;In der Kaiserstraße;In der Schillerstraße
+2,  Wann schließt die Meldebehörde am Mittwoch?,2,test3/listening/2.mp3,Um 14 Uhr;Um 17 Uhr;Um 18 Uhr
+3,  Wie viel kostet die Jacke jetzt?,2,test3/listening/3.mp3,119 Euro;97 Euro;97 Euro
+4,  Wie kommt die Frau zur Volkshochschule?,2,test3/listening/4.mp3,Mit dem Auto;Zu Fuß;Mit dem Bus
+5,  Wo findet die Frau Herrn Müller?,0,test3/listening/5.mp3,Im zweiten Stock;Im dritten Stock;Im Erdgeschoss
+6,  Wann kommt Thomas wieder in die Schule?,2,test3/listening/6.mp3,Am Dienstag;Am Mittwoch;Am Donnerstag
+7,Reisende nach München sollen an Gleis 9 warten,0,test3/listening/7.mp3,  
+8,Die Steinofenpizza kostet jetzt nur 3.99 Euro,0,test3/listening/8.mp3,
+9,  Man kann nicht mit der Straßenbahn in die Stadt fahren,0,test3/listening/9.mp3,  
+10,  Niemand kann jetzt aus dem Bus aussteigen,1,test3/listening/10.mp3,  
+11,  Wann soll Frau Richter in der Praxis anrufen?,2,test3/listening/11.mp3,Um 10 Uhr;Um 10.30 Uhr;Heute noch
+12,  Wann ist Herr Krieger wieder in der Firma?,2,test3/listening/12.mp3,Am 21. Juli;Am 23. Juli;Am 24. Juli
+13,  Wann kann man das Sozialamt besuchen?,1,test3/listening/13.mp3,Jeden Tag;Am Mittwoch;Am Freitag
+14,  Wie lange wartet Paul noch?,1,test3/listening/14.mp3,Bis drei Uhr;Bis vier Uhr;Bis fünf Uhr
+15,  Welche Nummer wählt man für Informationen zum persönlichen Konto?,1,test3/listening/15.mp3,Eins;Zwei;Drei

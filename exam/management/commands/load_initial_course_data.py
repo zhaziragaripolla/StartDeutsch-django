@@ -1,6 +1,5 @@
 from exam.models import Course
-from django.core.management import BaseCommand
-
+from django.core.management import BaseCommand, CommandError
 ALREADY_LOADED_ERROR_MESSAGE = """
 Course data is already loaded.
 """
@@ -11,8 +10,23 @@ class Command(BaseCommand):
         if Course.objects.exists():
             print(ALREADY_LOADED_ERROR_MESSAGE)
             return
-        listening_course = Course()
-        listening_course.title = "Listening"
-        listening_course.alias_name = "Hören"
-        listening_course.description = ""
-        listening_course.save()
+        try:
+            Course.objects.create(title="Listening",
+                              alias_name="Hören",
+                              description= "")
+
+            Course.objects.create(title="Reading",
+                              alias_name="Hören",
+                              description="")
+
+            Course.objects.create(title="Speaking",
+                              alias_name="Sprechen",
+                              description="")
+
+            Course.objects.create(title="Writing",
+                              alias_name="Schreiben",
+                              description="")
+        except Exception as e:
+            raise CommandError("Error in inserting {}: {}".format(
+                self.Course, str(e)))
+        self.stdout.write(self.style.SUCCESS('Course models loaded'))
