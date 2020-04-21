@@ -19,14 +19,14 @@ class GroupSerializer(serializers.HyperlinkedModelSerializer):
 class CourseSerializer(serializers.ModelSerializer):
     class Meta:
         model = Course
-        fields = ['id', 'title', 'aliasName', 'description', 'tests']
+        fields = ['id', 'title', 'alias_name', 'description', 'tests']
 
 
 class TestSerializer(serializers.ModelSerializer):
-    course = CourseSerializer(many=True, read_only=True)
+    # course = CourseSerializer(many=True, read_only=True)
     class Meta:
         model = Test
-        fields = ['id', 'course']
+        fields = '__all__'
 
 class ListeningQuestionSerializer(serializers.ModelSerializer):
 

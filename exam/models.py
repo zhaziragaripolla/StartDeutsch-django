@@ -4,8 +4,8 @@ from django.contrib.postgres.fields import ArrayField
 
 class Course(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4)
-    title = models.CharField(max_length=120)
-    aliasName = models.CharField(max_length=120)
+    title = models.CharField(max_length=120, unique=True)
+    alias_name = models.CharField(max_length=120)
     description = models.CharField(max_length=200)
 
     def __str__(self):
@@ -24,10 +24,13 @@ class Question(models.Model):
     class Meta:
         abstract = True
 class ListeningQuestion(Question):
-    question_text = models.TextField()
+    question_text = models.TextField(unique=True)
     audio_path = models.CharField(max_length=120)
     answer_choices = ArrayField(models.CharField(max_length=150), null=True, blank=True, default=list)
     correct_choice_index = models.DecimalField(max_digits=1, decimal_places=0)
+
+    class Meta:
+        unique_together = ('question_text', 'audio_path', 'answer_choices')
 
     def __str__(self):
         return self.question_text
@@ -41,6 +44,10 @@ class ReadingQuestion(Question):
     correct_answers = ArrayField(models.BooleanField(), blank=True, default=list)
     correct_choice_index = models.DecimalField(max_digits=1, decimal_places=0, blank=True, null=True)
     description = models.CharField(max_length=180, blank=True)
+
+    class Meta:
+        unique_together = ('question_text', 'question_texts',)
+
     def __str__(self):
         return self.question_text
 
@@ -59,7 +66,7 @@ class Form(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4)
     course = models.ForeignKey(Course, on_delete=models.CASCADE, related_name='forms')
     title = models.CharField(max_length=120)
-    text = models.TextField()
+    text = models.TextField(unique=True)
     image_path = models.CharField(max_length=120)
     answer_texts = ArrayField(models.CharField(max_length=150), null=True)
 
@@ -72,10 +79,14 @@ class Word(models.Model):
     theme = models.CharField(max_length=120)
     value = models.CharField(max_length=120)
 
+    class Meta:
+        unique_together = ('theme', 'value',)
+
     def __str__(self):
-        return self.value
+        return '%s %s' % (self.theme, self.value)
 
 class Card(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4)
     course = models.ForeignKey(Course, on_delete=models.CASCADE, related_name='cards')
-    image_path = models.CharField(max_length=120)
+    image_path = models.CharField(max_length=120, unique=True)
+
