@@ -13,15 +13,17 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 import os
 import dj_database_url
 from decouple import config
-import django_heroku
 
 # Defining Project root for Heroku configuration
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-SESSION_COOKIE_SECURE = True
-CSRF_COOKIE_SECURE = True
+
+# Change settings in settings.ini file according to environments(dev, prod)
+SESSION_COOKIE_SECURE = config('SESSION_COOKIE_SECURE', default=False, cast=bool)
+CSRF_COOKIE_SECURE = config('CSRF_COOKIE_SECURE', default=False, cast=bool)
+CORS_ORIGIN_ALLOW_ALL = True
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
@@ -35,7 +37,6 @@ DEBUG = config('DEBUG', default=False, cast=bool)
 ALLOWED_HOSTS = ['*',
                  ]
 
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -47,12 +48,16 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.postgres',
 
+    # OAuth2.0
+    'oauth2_provider',
+    'corsheaders',
+
     # own apps
     'exam.apps.ExamConfig',
     'users',
     'api',
 
-    #django rest
+    # django rest
     # 'talk',
     'rest_framework',
     'rest_framework.authtoken',
@@ -62,11 +67,10 @@ INSTALLED_APPS = [
 AUTH_USER_MODEL = 'users.CustomUser'
 
 MIDDLEWARE = [
-    # whitenoise
     'django.middleware.security.SecurityMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
+    'oauth2_provider.middleware.OAuth2TokenMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
-
-    'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -74,6 +78,25 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+# Authentication layer is supported by:
+# https://django-oauth-toolkit.readthedocs.io/en/latest/index.html
+
+AUTHENTICATION_BACKENDS = (
+    'oauth2_provider.backends.OAuth2Backend',
+    'django.contrib.auth.backends.ModelBackend',
+)
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': ('oauth2_provider.contrib.rest_framework.OAuth2Authentication',),
+}
+
+OAUTH2_PROVIDER = {
+    # this is the list of available scopes
+    'SCOPES': {'read': 'Read scope',
+               # 'write': 'Write scope'
+               },
+    'ACCESS_TOKEN_EXPIRE_SECONDS': 36000,
+}
 
 ROOT_URLCONF = 'StartDeutsch.urls'
 
@@ -150,7 +173,5 @@ MEDIA_ROOT = os.path.join(PROJECT_ROOT, 'media')
 MEDIA_URL = '/media/'
 
 # Configure Django App for Heroku.
-django_heroku.settings(locals())
-TEST_RUNNER = 'django_heroku.HerokuDiscoverRunner'
-
-# just checking
+# django_heroku.settings(locals())
+# TEST_RUNNER = 'django_heroku.HerokuDiscoverRunner'
