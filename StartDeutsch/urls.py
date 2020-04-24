@@ -18,6 +18,12 @@ from django.contrib import admin
 import oauth2_provider.views as oauth2_views
 from django.conf import settings
 
+urlpatterns = [
+    path('api/v1/', include('api.urls')),
+    # Fixing issue according to https://github.com/jazzband/django-oauth-toolkit/issues/553
+    path('oauth2/', include(('oauth2_provider.urls', 'oauth2_provider_app'), namespace='oauth2_provider')),
+]
+
 # OAuth2 provider endpoints
 oauth2_endpoint_views = [
     #path('authorize/', oauth2_views.AuthorizationView.as_view(), name="authorize"),
@@ -26,9 +32,11 @@ oauth2_endpoint_views = [
 ]
 
 if settings.DEBUG:
-    oauth2_endpoint_views += [
-        # Admin
+    urlpatterns += [
         path('admin/', admin.site.urls),
+    ]
+
+    oauth2_endpoint_views += [
         # OAuth2 Application Management endpoints
         path('applications/', oauth2_views.ApplicationList.as_view(), name="list"),
         path('applications/register/', oauth2_views.ApplicationRegistration.as_view(), name="register"),
@@ -43,9 +51,3 @@ if settings.DEBUG:
         path('authorized-tokens/<pk>/delete/', oauth2_views.AuthorizedTokenDeleteView.as_view(),
             name="authorized-token-delete"),
     ]
-
-urlpatterns = [
-    path('api/v1/', include('api.urls')),
-    # Fixing issue according to https://github.com/jazzband/django-oauth-toolkit/issues/553
-    path('oauth2/', include(('oauth2_provider.urls', 'oauth2_provider_app'), namespace='oauth2_provider')),
-]
