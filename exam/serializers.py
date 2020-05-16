@@ -19,7 +19,7 @@ class GroupSerializer(serializers.HyperlinkedModelSerializer):
 class CourseSerializer(serializers.ModelSerializer):
     class Meta:
         model = Course
-        fields = ['id', 'title', 'alias_name', 'description', 'tests']
+        fields = ['id', 'title', 'alias_name', 'description']
 
 
 class TestSerializer(serializers.ModelSerializer):
@@ -34,11 +34,8 @@ class ListeningQuestionSerializer(serializers.ModelSerializer):
         model = ListeningQuestion
         fields = '__all__'
 
-        # What self means??
     def to_representation(self, instance):
         ret = super().to_representation(instance)
-        # Here we filter the null values and creates a new dictionary
-        # We use OrderedDict like in original method
         ret = OrderedDict(filter(itemgetter(1), ret.items()))
         return ret
 
@@ -48,11 +45,8 @@ class ReadingQuestionSerializer(serializers.ModelSerializer):
         model = ReadingQuestion
         fields = '__all__'
 
-        # What self means??
     def to_representation(self, instance):
         ret = super().to_representation(instance)
-        # Here we filter the null values and creates a new dictionary
-        # We use OrderedDict like in original method
         ret = OrderedDict(filter(itemgetter(1), ret.items()))
         return ret
 
