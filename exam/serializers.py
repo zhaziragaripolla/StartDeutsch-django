@@ -34,21 +34,17 @@ class ListeningQuestionSerializer(serializers.ModelSerializer):
         model = ListeningQuestion
         fields = '__all__'
 
-    def to_representation(self, instance):
-        ret = super().to_representation(instance)
-        ret = OrderedDict(filter(itemgetter(1), ret.items()))
-        return ret
-
 class ReadingQuestionSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = ReadingQuestion
         fields = '__all__'
 
-    def to_representation(self, instance):
-        ret = super().to_representation(instance)
-        ret = OrderedDict(filter(itemgetter(1), ret.items()))
-        return ret
+    # TODO: remove blank fields
+    # def to_representation(self, instance):
+    #     ret = super().to_representation(instance)
+    #     ret = OrderedDict(filter(itemgetter(1), ret.items()))
+    #     return ret
 
 class LetterSerializer(serializers.ModelSerializer):
 

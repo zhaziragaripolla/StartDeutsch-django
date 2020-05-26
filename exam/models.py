@@ -18,16 +18,17 @@ class Test(models.Model):
 class Question(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4)
     test = models.ForeignKey(Test, on_delete=models.CASCADE)
-    order_number = models.DecimalField(max_digits=2, decimal_places=0, default=0)
+    order_number = models.IntegerField()
 
     # Abstract Inheritance
     class Meta:
         abstract = True
+
 class ListeningQuestion(Question):
     question_text = models.TextField(unique=True)
     audio_path = models.CharField(max_length=120)
     answer_choices = ArrayField(models.CharField(max_length=150), null=True, blank=True, default=list)
-    correct_choice_index = models.DecimalField(max_digits=1, decimal_places=0)
+    correct_choice_index = models.IntegerField(default=0)
 
     class Meta:
         unique_together = ('question_text', 'audio_path', 'answer_choices')
@@ -36,13 +37,13 @@ class ListeningQuestion(Question):
         return self.question_text
 
 class ReadingQuestion(Question):
-    section = models.DecimalField(max_digits=1, decimal_places=0)
+    section = models.IntegerField()
     image_path = models.CharField(max_length=120, blank=True) # Optional (don't put null=True)
     question_text = models.TextField(blank=True) # Optional (don't put null=True)
-    question_texts = ArrayField(models.CharField(max_length=220), blank=True, null=True, default=list)
-    answer_image_paths = ArrayField(models.CharField(max_length=220), blank=True, default=list)
-    correct_answers = ArrayField(models.BooleanField(), blank=True, default=list)
-    correct_choice_index = models.DecimalField(max_digits=1, decimal_places=0, blank=True, null=True)
+    question_texts = ArrayField(models.CharField(max_length=220), null=True, default=list)
+    answer_image_paths = ArrayField(models.CharField(max_length=220), blank=True, null=True, default=list)
+    correct_answers = ArrayField(models.BooleanField(), null=True, default=list)
+    correct_choice_index = models.IntegerField(blank=True, null=True, default=None)
     description = models.CharField(max_length=180, blank=True)
 
     class Meta:
@@ -88,5 +89,5 @@ class Word(models.Model):
 class Card(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4)
     course = models.ForeignKey(Course, on_delete=models.CASCADE, related_name='cards')
-    image_path = models.CharField(max_length=120, unique=True)
+    image_url = models.CharField(max_length=120, unique=True)
 

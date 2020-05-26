@@ -173,5 +173,5 @@ MEDIA_ROOT = os.path.join(PROJECT_ROOT, 'media')
 MEDIA_URL = '/media/'
 
 # Configure Django App for Heroku.
-# django_heroku.settings(locals())
-# TEST_RUNNER = 'django_heroku.HerokuDiscoverRunner'
+#django_heroku.settings(locals())
+#TEST_RUNNER = 'django_heroku.HerokuDiscoverRunner'
