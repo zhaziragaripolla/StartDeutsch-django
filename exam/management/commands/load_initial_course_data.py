@@ -11,20 +11,20 @@ class Command(BaseCommand):
             print(ALREADY_LOADED_ERROR_MESSAGE)
             return
         try:
-            Course.objects.create(title="Listening",
-                              alias_name="Hören",
+            Course.objects.create(title="Hören",
+                              alias_name="Listening",
                               description= "")
 
-            Course.objects.create(title="Reading",
-                              alias_name="Hören",
+            Course.objects.create(title="Lesen",
+                              alias_name="Reading",
                               description="")
 
-            Course.objects.create(title="Speaking",
-                              alias_name="Sprechen",
+            Course.objects.create(title="Bitten formulieren",
+                              alias_name="Cards",
                               description="")
 
-            Course.objects.create(title="Writing",
-                              alias_name="Schreiben",
+            Course.objects.create(title="Fragen formulieren",
+                              alias_name="Words",
                               description="")
         except Exception as e:
             raise CommandError("Error in inserting {}: {}".format(

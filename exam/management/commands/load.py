@@ -23,10 +23,10 @@ class Command(BaseCommand):
         with transaction.atomic():
             self.stdout.write('Starting command execution')
             try:
-                Course.objects.get(title="Listening")
-                Course.objects.get(title="Reading")
-                Course.objects.get(title="Speaking")
-                Course.objects.get(title="Writing")
+                Course.objects.get(alias_name="Listening")
+                Course.objects.get(alias_name="Reading")
+                Course.objects.get(alias_name="Words")
+                Course.objects.get(alias_name="Cards")
             except Course.DoesNotExist as e:
                 raise CommandError("Course not found. "
                                    "Check if you run load_initial_course_data.py'".format(Course, str(e)))
@@ -61,10 +61,10 @@ class Command(BaseCommand):
             with open(file_path) as csv_file:
                 reader = csv.DictReader(csv_file)
                 for row in reader:
-                    image_path = row['image_url']
+                    image_url = row['image_url']
                     try:
-                        speaking_course = Course.objects.get(title="Speaking")
-                        Card.objects.create(image_path=image_path, course=speaking_course)
+                        speaking_course = Course.objects.get(alias_name="Cards")
+                        Card.objects.create(image_url=image_url, course=speaking_course)
                     except Exception as e:
                         raise CommandError("Error in inserting {}: {}".format(Card, str(e)))
         except FileNotFoundError:
@@ -78,7 +78,7 @@ class Command(BaseCommand):
                     theme = row['theme']
                     value = row['value']
                     try:
-                        speaking_course = Course.objects.get(title="Speaking")
+                        speaking_course = Course.objects.get(alias_name="Words")
                         Word.objects.create(theme=theme, value=value, course=speaking_course)
                     except Exception as e:
                         raise CommandError("Error in inserting {}: {}".format(Card, str(e)))
@@ -89,7 +89,7 @@ class Command(BaseCommand):
         try:
             with open(file_path) as csv_file:
                 reader = csv.DictReader(csv_file)
-                listening_course = Course.objects.get(title="Listening")
+                listening_course = Course.objects.get(alias_name="Listening")
                 listening_test = Test.objects.create(course=listening_course)
                 for row in reader:
                     # Parsing Listening question
@@ -98,13 +98,13 @@ class Command(BaseCommand):
                     order_number = int(row['order_number'])
                     question.order_number = order_number
                     question.question_text = row['question_text']
+                    question.correct_choice_index = int(row['correct_choice_index'])
                     question.audio_path = row['audio_path']
-                    if 6 < order_number < 11:
+                    if not 6 < order_number < 11:
                         raw_answer_choices = row['answer_choices']
                         answer_choices = [choice for choice in raw_answer_choices.split(';') if choice]
                         for choice in answer_choices:
                             question.answer_choices.append(choice)
-                    question.correct_choice_index = row['correct_choice_index']
                     question.save()
         except FileNotFoundError:
             raise CommandError("File {} does not exist".format(file_path))
@@ -113,7 +113,7 @@ class Command(BaseCommand):
         try:
             with open(file_path) as csv_file:
                 reader = csv.DictReader(csv_file)
-                reading_course = Course.objects.get(title="Reading")
+                reading_course = Course.objects.get(alias_name="Reading")
                 reading_test = Test.objects.create(course=reading_course)
                 for row in reader:
                     # Parsing Reading question
@@ -141,7 +141,7 @@ class Command(BaseCommand):
                         question.correct_choice_index = row['correct_choice_index']
                          # Parsing answer image paths
                         raw_image_paths = row['answer_image_paths']
-                        image_paths = [path for path in raw_image_paths.split(',') if path]
+                        image_paths = [path for path in raw_image_paths.split(';') if path]
                         for path in image_paths:
                             question.answer_image_paths.append(path)
                     elif row['section'] == '3':
